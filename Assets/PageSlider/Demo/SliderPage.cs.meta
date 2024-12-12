@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: fe58ab394a600394ba5d6e2a433eb00b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 241341
+  packageName: Page Slider
+  packageVersion: 1.1.1
+  assetPath: Assets/PageSlider/Demo/SliderPage.cs
+  uploadId: 665816

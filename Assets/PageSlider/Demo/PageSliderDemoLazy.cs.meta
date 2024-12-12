@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 063d4ddcd5a8f3c4f8f9e8ef94f5e4b7
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 241341
+  packageName: Page Slider
+  packageVersion: 1.1.1
+  assetPath: Assets/PageSlider/Demo/PageSliderDemoLazy.cs
+  uploadId: 665816

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2b5467668b887ad4990698a2c3cea31c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 241341
+  packageName: Page Slider
+  packageVersion: 1.1.1
+  assetPath: Assets/PageSlider/Demo/Slider_PageLazy.prefab
+  uploadId: 665816
