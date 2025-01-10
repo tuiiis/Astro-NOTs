@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Config 0
   m_EditorClassIdentifier: 
   wirePrefab: {fileID: 6759754257290500424, guid: 050006b4d2ec39642ac89d3a860ae768, type: 3}
-  correctHoleIndex: 2
+  correctHoleIndex: 13

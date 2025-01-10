@@ -14,3 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wireConfigs:
   - {fileID: 11400000, guid: e30ab7b7682756e45969d37754547f14, type: 2}
+  - {fileID: 11400000, guid: 11e984e52af66964e9a57d7a5e75d94e, type: 2}
+  - {fileID: 11400000, guid: 6c72fbadc17e6c54f88a37b6918c4451, type: 2}
+  - {fileID: 11400000, guid: 8409e1cf6ae30404d83eb6623f4b077c, type: 2}
+  - {fileID: 11400000, guid: e4b64476b70b99948bc68bc26e9dd77e, type: 2}
+  - {fileID: 11400000, guid: d50a8ecd29f197544b7a2037b4ae4e4d, type: 2}

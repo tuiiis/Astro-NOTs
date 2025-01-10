@@ -5,8 +5,9 @@ public class WireStart : MonoBehaviour
 {
     public LineRenderer lineRenderer; // Reference to the existing LineRenderer
     public int oppositeWay = 1; // Направление смещения провода
-    public Transform correctHole; // "Правильная" дырка для подключения
 
+
+    private Transform correctHole; // "Правильная" дырка для подключения
     private float magnitude = 0.3f; // Радиус подключения
     private List<Transform> holes; // Список дырок
     private bool isDragging = false;
@@ -14,8 +15,10 @@ public class WireStart : MonoBehaviour
     private Vector3 originalPosition;
     private Transform connectedHole;
 
+
     private void Start()
     {
+        originalPosition = transform.position;
     }
 
     void Update()
@@ -30,11 +33,10 @@ public class WireStart : MonoBehaviour
         }
     }
 
-    public void Setup(Transform targetHole, List<Transform> holes)
+    public void Setup(Transform targetHole) //TODO добавить ссылку на объект
     {
         // Передача правильной дырки
         correctHole = targetHole;
-        this.holes = holes;
     }
 
     void SetPosition(Vector3 position)
@@ -51,9 +53,10 @@ public class WireStart : MonoBehaviour
         Transform closestHole = null;
         float closestDistance = magnitude;
 
-        foreach (Transform hole in holes)
+        foreach (Transform hole in GameManager.Instance.holes)
         {
             float distance = Vector3.Distance(position, hole.position);
+            Debug.Log($"Hole Position: {hole.position}, Distance: {distance}");
             if (distance < closestDistance)
             {
                 closestDistance = distance;
@@ -61,6 +64,7 @@ public class WireStart : MonoBehaviour
             }
         }
 
+        Debug.Log($"Closest Hole: {closestHole?.name}, Distance: {closestDistance}");
         return closestHole;
     }
 
@@ -94,10 +98,12 @@ public class WireStart : MonoBehaviour
             }
             else
             {
+                Debug.Log("Нет ближайших отверстий в радиусе.");
                 ResetPosition();
             }
         }
     }
+
 
     private void ResetPosition()
     {

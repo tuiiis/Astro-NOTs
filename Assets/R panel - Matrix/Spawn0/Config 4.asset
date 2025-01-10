@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c8dcd5fdc7f2844ca08eeda6aeabe46, type: 3}
   m_Name: Config 4
   m_EditorClassIdentifier: 
-  wirePrefab: {fileID: 6759754257290500424, guid: 050006b4d2ec39642ac89d3a860ae768, type: 3}
-  correctHoleIndex: 2
+  wirePrefab: {fileID: 2681859017243998134, guid: 781ec6ca872fa0f4f9a9f32bb95b8dbf, type: 3}
+  correctHoleIndex: 11

@@ -3,13 +3,27 @@ using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
+
     public WireSpawnSet currentSpawnSet; // Текущая конфигурация проводов
     public List<Transform> spawnPositions; // Координаты для спавна проводов
     public List<Transform> holes; // Список дырок (16 штук)
     public GameObject holePrefab; // Префаб дырки
 
+    public static GameManager Instance { get; private set; }
     private List<GameObject> spawnedWires = new List<GameObject>();
     private List<GameObject> spawnedHoles = new List<GameObject>();
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Start()
     {
@@ -58,15 +72,19 @@ public class GameManager : MonoBehaviour
 
             // Создаём провод
             GameObject spawnedWire = Instantiate(config.wirePrefab, spawnPosition.position, Quaternion.identity);
-            Debug.Log($"{spawnedWire == null} spawnedWire = NULL");
+            // TODO: передать в wirestart ссылку на созданный объект и оттуда уже доставать данные для обработки (префаб содержит LineRenderer (у него важно направление), и конец провода)
+            
             // Передаём информацию о правильной дырке
-            WireStart wireLogic = spawnedWire.GetComponent<WireStart>();
-            Debug.Log($"{wireLogic == null} WireLogic = NULL" );
+
             Transform correctHole = holes[config.correctHoleIndex];
-            Debug.Log($"{correctHole == null} correctHole = NULL");
-            wireLogic.Setup(correctHole, holes);
+
+            WireStart wireStart = spawnedWire.GetComponentInChildren<WireStart>();
+
+            wireStart.Setup(correctHole);
 
             spawnedWires.Add(spawnedWire);
+
+            Debug.Log($"i:{i}, config.correctHoleIndex: {config.correctHoleIndex}");
         }
     }
 }
