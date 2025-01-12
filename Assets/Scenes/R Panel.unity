@@ -781,7 +781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d4ebdfe3b0b3f04d9731cc8d3aa2c42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpawnSet: {fileID: 11400000, guid: 59b39b608f9a9d3448dd72527d4bfc6c, type: 2}
+  spawnSets: {fileID: 11400000, guid: 020c5f8eca121474aa779a09d2676d4c, type: 2}
   spawnPositions:
   - {fileID: 776229772}
   - {fileID: 1880943174}

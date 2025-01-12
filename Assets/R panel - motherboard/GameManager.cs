@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class GameManager : MonoBehaviour
 {
 
-    public WireSpawnSet currentSpawnSet; // Текущая конфигурация проводов
+    public WireSpawnSet spawnSets; // Текущая конфигурация проводов
     public List<Transform> spawnPositions; // Координаты для спавна проводов
     public List<Transform> holes; // Список дырок (16 штук)
     public GameObject holePrefab; // Префаб дырки
@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     private List<GameObject> spawnedWires = new List<GameObject>();
     private List<GameObject> spawnedHoles = new List<GameObject>();
+    private List<WireSpawnConfig> randomSet = new List<WireSpawnConfig>();
 
     private void Awake()
     {
@@ -27,14 +28,11 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(holes.Count);
-        for (int i = 0; i < holes.Count; i++)
-        {
-            Debug.Log(holes[i].transform.position.x);
-        }
+        Debug.Log($"{spawnSets == null} spawnsets null");
+        Debug.Log($"{randomSet == null} randomSet null");
+        randomSet = spawnSets.RandomSet();
         SpawnHoles();
         SpawnWires();
-
     }
 
     void SpawnHoles()
@@ -64,11 +62,11 @@ public class GameManager : MonoBehaviour
         spawnedWires.Clear();
 
         // Спавним провода
-        for (int i = 0; i < currentSpawnSet.wireConfigs.Count; i++)
+        for (int i = 0; i < spawnSets.wireConfigs.Count; i++)
         {
             // Берём позицию для спавна
             Transform spawnPosition = spawnPositions[i];
-            WireSpawnConfig config = currentSpawnSet.wireConfigs[i];
+            WireSpawnConfig config = randomSet[i];
 
             // Создаём провод
             GameObject spawnedWire = Instantiate(config.wirePrefab, spawnPosition.position, Quaternion.identity);

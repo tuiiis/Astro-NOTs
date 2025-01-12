@@ -33,7 +33,7 @@ public class WireStart : MonoBehaviour
         }
     }
 
-    public void Setup(Transform targetHole) //TODO добавить ссылку на объект
+    public void Setup(Transform targetHole)
     {
         // Передача правильной дырки
         correctHole = targetHole;
@@ -56,7 +56,7 @@ public class WireStart : MonoBehaviour
         foreach (Transform hole in GameManager.Instance.holes)
         {
             float distance = Vector3.Distance(position, hole.position);
-            Debug.Log($"Hole Position: {hole.position}, Distance: {distance}");
+            //Debug.Log($"Hole Position: {hole.position}, Distance: {distance}");
             if (distance < closestDistance)
             {
                 closestDistance = distance;
@@ -64,7 +64,7 @@ public class WireStart : MonoBehaviour
             }
         }
 
-        Debug.Log($"Closest Hole: {closestHole?.name}, Distance: {closestDistance}");
+        //Debug.Log($"Closest Hole: {closestHole?.name}, Distance: {closestDistance}");
         return closestHole;
     }
 
