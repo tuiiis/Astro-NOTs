@@ -12,13 +12,16 @@ public class SliderLogic : MonoBehaviour
     public GameObject[] arrows;
     public int temperature;
     public Transform circleButton;
+    public GameObject intergrity;
 
+    private IntegrityChanger integrityHealth;
     private Transform selectedSlider = null; // Ползунок, который в данный момент перемещается
 
     public void Start()
     {
         temperature = Random.Range(10, 99);
         Debug.Log("Temperature: " + temperature);
+        integrityHealth = intergrity.GetComponent<IntegrityChanger>();
 
         InitializeSliderPosition(redSlider, slider0);
         InitializeSliderPosition(orangeSlider, slider1);
@@ -177,7 +180,7 @@ public class SliderLogic : MonoBehaviour
             }
             else
             {
-                Debug.Log("INCORRECT");
+                integrityHealth.DecreaseHealth();
             }
         }
         else if (numArrows == 1)
@@ -231,7 +234,7 @@ public class SliderLogic : MonoBehaviour
             }
             else
             {
-                Debug.Log("INCORRECT");
+                integrityHealth.DecreaseHealth();
             }
         }
         else
@@ -266,7 +269,7 @@ public class SliderLogic : MonoBehaviour
             }
             else
             {
-                Debug.Log("INCORRECT");
+                integrityHealth.DecreaseHealth();
             }
         }
     }

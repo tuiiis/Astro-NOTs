@@ -14,11 +14,14 @@ public class WireStart : MonoBehaviour
     private bool isConnected = false;
     private Vector3 originalPosition;
     private Transform connectedHole;
+    private IntegrityChanger integrity;
 
 
     private void Start()
     {
         originalPosition = transform.position;
+        var integrityObject = GameObject.Find("Integrity");
+        integrity = integrityObject.GetComponent<IntegrityChanger>();
     }
 
     void Update()
@@ -92,7 +95,7 @@ public class WireStart : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Неправильное подключение!");
+                    integrity.DecreaseHealth();
                     ResetPosition();
                 }
             }
