@@ -25,7 +25,7 @@ public class IntegrityChanger : MonoBehaviour
         }
     }
 
-    void DecreaseHealth()
+    public void DecreaseHealth()
     {
         if (healthPoints > 0)
         {

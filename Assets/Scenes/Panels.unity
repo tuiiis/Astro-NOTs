@@ -950,6 +950,7 @@ MonoBehaviour:
   - {fileID: 169740332}
   temperature: 0
   circleButton: {fileID: 1342863391}
+  intergrity: {fileID: 1490500110}
 --- !u!1 &594955268
 GameObject:
   m_ObjectHideFlags: 0
