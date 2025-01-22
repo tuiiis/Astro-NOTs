@@ -21,6 +21,11 @@ public class SceneController : MonoBehaviour
         Debug.Log("Game has been quit."); // Отображается в редакторе, но не в сборке
     }
 
+    public void GoToTutor()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
+
     private System.Collections.IEnumerator SetSceneActiveWhenLoaded(string sceneName)
     {
         // Ожидание, пока сцена загрузится
