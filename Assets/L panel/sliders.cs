@@ -201,7 +201,7 @@ public class SliderLogic : MonoBehaviour
             }
             else
             {
-                Debug.Log("INCORRECT");
+                integrityHealth.DecreaseHealth();
             }
         }
         else if (numArrows == 0)
