@@ -21,7 +21,6 @@ public class SliderLogic : MonoBehaviour
     {
         temperature = Random.Range(10, 99);
         Debug.Log("Temperature: " + temperature);
-
         integrityHealth = intergrity.GetComponent<IntegrityChanger>();
 
         InitializeSliderPosition(redSlider, slider0);
@@ -158,13 +157,6 @@ public class SliderLogic : MonoBehaviour
 
         Debug.Log("Temperature: " + temperature);
 
-        SpriteRenderer spriteRenderer = circleButton.GetComponent<SpriteRenderer>();
-        if (spriteRenderer == null)
-        {
-            Debug.LogError("SpriteRenderer not found on circleButton!");
-            return;
-        }
-
         if (numArrows == 2)
         {
             float expectedRed = Mathf.Abs((temperature / 10) - (temperature % 10));
@@ -185,7 +177,6 @@ public class SliderLogic : MonoBehaviour
                 Mathf.Approximately(GetSliderIndex(greenSlider, slider2), expectedGreen))
             {
                 Debug.Log("Congrats!");
-                spriteRenderer.color = new Color(145f / 255f, 199f / 255f, 91f / 255f); // #91c75b
             }
             else
             {
@@ -207,7 +198,6 @@ public class SliderLogic : MonoBehaviour
                 Mathf.Approximately(GetSliderIndex(greenSlider, slider2), expectedGreen))
             {
                 Debug.Log("Congrats!");
-                spriteRenderer.color = new Color(145f / 255f, 199f / 255f, 91f / 255f); // #91c75b
             }
             else
             {
@@ -241,7 +231,6 @@ public class SliderLogic : MonoBehaviour
                 Mathf.Approximately(GetSliderIndex(greenSlider, slider2), expectedGreen))
             {
                 Debug.Log("Congrats!");
-                spriteRenderer.color = new Color(145f / 255f, 199f / 255f, 91f / 255f); // #91c75b
             }
             else
             {
@@ -277,7 +266,6 @@ public class SliderLogic : MonoBehaviour
                 Mathf.Approximately(GetSliderIndex(greenSlider, slider2), expectedGreen))
             {
                 Debug.Log("Congrats!");
-                spriteRenderer.color = new Color(145f / 255f, 199f / 255f, 91f / 255f); // #91c75b
             }
             else
             {

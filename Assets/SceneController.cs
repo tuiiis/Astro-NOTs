@@ -26,11 +26,6 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("Tutorial");
     }
 
-    public void GoToOptions()
-    {
-        SceneManager.LoadScene("Options");
-    }
-
     private System.Collections.IEnumerator SetSceneActiveWhenLoaded(string sceneName)
     {
         // Ожидание, пока сцена загрузится
