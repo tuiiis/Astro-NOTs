@@ -23,7 +23,7 @@ public class ArrowButton : MonoBehaviour
         // Preserve the camera's Z-axis
         Vector3 targetPosition = new Vector3(
             targetObject.position.x,
-            targetObject.position.y,
+            mainCamera.transform.position.y,
             mainCamera.transform.position.z
         );
 

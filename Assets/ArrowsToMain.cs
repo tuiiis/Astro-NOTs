@@ -9,25 +9,9 @@ public class ArrowToMain : MonoBehaviour
     {
         if (string.IsNullOrEmpty(sceneName))
         {
-            Debug.LogError("Scene name is not assigned!");
             return;
         }
 
-        // Загружаем указанную сцену
-        LoadTargetScene();
-    }
-
-    private void LoadTargetScene()
-    {
-        // Проверяем, существует ли сцена с указанным именем
-        if (Application.CanStreamedLevelBeLoaded(sceneName))
-        {
-            SceneManager.LoadScene(sceneName);
-            Debug.Log($"Scene '{sceneName}' is loading...");
-        }
-        else
-        {
-            Debug.LogError($"Scene '{sceneName}' does not exist or is not added to Build Settings.");
-        }
+        SceneManager.LoadScene(sceneName);
     }
 }

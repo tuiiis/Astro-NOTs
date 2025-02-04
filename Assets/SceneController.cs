@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
+
     // Метод для переключения сцены по имени
     public void LoadScene(string sceneName)
     {
@@ -21,15 +22,6 @@ public class SceneController : MonoBehaviour
         Debug.Log("Game has been quit."); // Отображается в редакторе, но не в сборке
     }
 
-    public void GoToTutor()
-    {
-        SceneManager.LoadScene("Tutorial");
-    }
-
-    public void GoToOptions()
-    {
-        SceneManager.LoadScene("Options");
-    }
     private System.Collections.IEnumerator SetSceneActiveWhenLoaded(string sceneName)
     {
         // Ожидание, пока сцена загрузится
@@ -41,5 +33,10 @@ public class SceneController : MonoBehaviour
         // Устанавливаем сцену как активную
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneName));
         Debug.Log($"Сцена {sceneName} теперь активная.");
+    }
+
+    public void StoreCamera(int panelNumber)
+    {
+        CameraManager.Instance.PanelNumber = (int)panelNumber;
     }
 }

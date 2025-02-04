@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
-
+    public Camera mainCamera;
     public WireSpawnSet spawnSets; // Текущая конфигурация проводов
     public List<Transform> spawnPositions; // Координаты для спавна проводов
     public List<Transform> holes; // Список дырок (16 штук)
@@ -28,8 +28,17 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        Debug.Log($"{spawnSets == null} spawnsets null");
-        Debug.Log($"{randomSet == null} randomSet null");
+        if (CameraManager.Instance != null)
+        {
+            mainCamera.transform.position = CameraManager.Instance.PanelNumber switch
+            {
+                1 => CameraManager.Instance.LeftCameraPosition,
+                2 => CameraManager.Instance.MiddleCameraPosition,
+                3 => CameraManager.Instance.RightCameraPosition,
+                _ => mainCamera.transform.position
+            };
+        }
+
         randomSet = spawnSets.RandomSet();
         SpawnHoles();
         SpawnWires();
