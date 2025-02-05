@@ -5,6 +5,7 @@ public class ArrowButton : MonoBehaviour
     public Transform targetObject; // Assign the target object via Inspector
     public Camera mainCamera; // Assign the camera to move via Inspector
     public float moveSpeed = 5f; // Speed of the camera movement
+    public bool vertical = false;
 
     private void OnMouseDown()
     {
@@ -20,12 +21,24 @@ public class ArrowButton : MonoBehaviour
 
     private System.Collections.IEnumerator MoveCameraToTarget()
     {
-        // Preserve the camera's Z-axis
-        Vector3 targetPosition = new Vector3(
+        Vector3 targetPosition;
+
+        if (vertical)
+        {
+            targetPosition = new Vector3(
+            targetObject.position.x,
+            targetObject.position.y,
+            mainCamera.transform.position.z);
+        }
+        else
+        {
+            targetPosition = new Vector3(
             targetObject.position.x,
             mainCamera.transform.position.y,
-            mainCamera.transform.position.z
-        );
+            mainCamera.transform.position.z);
+
+        }
+        // Preserve the camera's Z-axis
 
         // Smoothly move the camera to the target's position
         while (Vector3.Distance(mainCamera.transform.position, targetPosition) > 0.1f)
