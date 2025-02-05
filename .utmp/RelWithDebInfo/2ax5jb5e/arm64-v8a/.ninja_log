@@ -1,0 +1,12 @@
+# ninja log v5
+91	801	7604827248278367	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	8a85a07469c1ff7
+804	1545	7604827254914158	C:/Users/Tatsiana Halaburda/Astro-NOTs repo/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2ax5jb5e/obj/arm64-v8a/libswappywrapper.so	616c80c0e5f09a80
+59	2092	7604827261303196	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	b5df52f498e37c5d
+33	2151	7604827261909738	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	b5a4c56471c7daa6
+72	2153	7604827262051655	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	2cc0c7b7320418a3
+21	2164	7604827261919776	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	4ad36e73afd180bb
+82	2299	7604827263579968	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	1b49490bdd443667
+12	2372	7604827264326035	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	bc63d566266ab8dc
+50	2589	7604827266543328	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	4487abb4f80378d9
+1	2777	7604827268450431	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	116feb664fe097ba
+2778	2984	7604827270565455	C:/Users/Tatsiana Halaburda/Astro-NOTs repo/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2ax5jb5e/obj/arm64-v8a/libgame.so	2714bf13f42672d0

@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Panels.unity
     guid: 22dc89cb54a51d74ba1e0bf37b9703a2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Full view.unity
     guid: 55c2c7a969a33c041ab960181e9ce15d
   - enabled: 1

@@ -44,6 +44,6 @@ public class TutorialManager : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Full view");
+        SceneManager.LoadScene("Panels");
     }
 }

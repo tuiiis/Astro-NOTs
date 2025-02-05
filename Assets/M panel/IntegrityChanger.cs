@@ -13,7 +13,7 @@ public class IntegrityChanger : MonoBehaviour
         originalPosition = transform.position;
 
         // Calculate the step distance (1/4th of object's length)
-        stepDistance = transform.localScale.y / 5f;
+        stepDistance = transform.localScale.y / 6f;
     }
 
     private void Update()
