@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class SliderLogic : MonoBehaviour
 {
@@ -14,6 +16,8 @@ public class SliderLogic : MonoBehaviour
     public Transform circleButton;
     public GameObject intergrity;
 
+    public TMP_Text temperatureText;
+
     private IntegrityChanger integrityHealth;
     private Transform selectedSlider = null; // Ползунок, который в данный момент перемещается
 
@@ -21,6 +25,9 @@ public class SliderLogic : MonoBehaviour
     {
         temperature = Random.Range(10, 99);
         Debug.Log("Temperature: " + temperature);
+
+        temperatureText = GameObject.Find("TemperatureTextObject").GetComponent<TMP_Text>();
+        temperatureText.text = "Temperature: " + temperature.ToString() + "°С";
 
         integrityHealth = intergrity.GetComponent<IntegrityChanger>();
 
