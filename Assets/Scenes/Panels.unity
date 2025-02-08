@@ -307,6 +307,7 @@ Transform:
   m_Children:
   - {fileID: 1997361087}
   - {fileID: 1490500113}
+  - {fileID: 848983241}
   m_Father: {fileID: 1502811294}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!331 &29217688
@@ -1126,6 +1127,7 @@ MonoBehaviour:
   LED2_GLZ: {fileID: 743395626}
   LED3_RND: {fileID: 2060205367}
   KB_Score: {fileID: 343395346}
+  intergrity: {fileID: 1490500110}
 --- !u!1 &386035647
 GameObject:
   m_ObjectHideFlags: 0
@@ -2639,12 +2641,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 848983240}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.8, y: 0.94, z: 0}
-  m_LocalScale: {x: -0.8036691, y: 0.8301509, z: 0.8301509}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 13.876358, y: 0, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1502811294}
+  m_Father: {fileID: 29217687}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!331 &848983242
 SpriteMask:
@@ -5069,7 +5071,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 29217687}
-  - {fileID: 848983241}
   m_Father: {fileID: 2021872221}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1524477778 stripped

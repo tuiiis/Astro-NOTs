@@ -191,7 +191,7 @@ public class SliderLogic : MonoBehaviour
                 Mathf.Approximately(GetSliderIndex(orangeSlider, slider1), expectedOrange) &&
                 Mathf.Approximately(GetSliderIndex(greenSlider, slider2), expectedGreen))
             {
-                Debug.Log("Congrats!");
+                integrityHealth.LogCorrect();
                 spriteRenderer.color = new Color(145f / 255f, 199f / 255f, 91f / 255f); // #91c75b
             }
             else
@@ -213,12 +213,12 @@ public class SliderLogic : MonoBehaviour
                 Mathf.Approximately(GetSliderIndex(orangeSlider, slider1), expectedOrange) &&
                 Mathf.Approximately(GetSliderIndex(greenSlider, slider2), expectedGreen))
             {
-                Debug.Log("Congrats!");
+                integrityHealth.LogCorrect();
                 spriteRenderer.color = new Color(145f / 255f, 199f / 255f, 91f / 255f); // #91c75b
             }
             else
             {
-                Debug.Log("INCORRECT");
+                integrityHealth.DecreaseHealth();
             }
         }
         else if (numArrows == 0)
@@ -247,7 +247,7 @@ public class SliderLogic : MonoBehaviour
                 Mathf.Approximately(GetSliderIndex(orangeSlider, slider1), expectedOrange) &&
                 Mathf.Approximately(GetSliderIndex(greenSlider, slider2), expectedGreen))
             {
-                Debug.Log("Congrats!");
+                integrityHealth.LogCorrect();
                 spriteRenderer.color = new Color(145f / 255f, 199f / 255f, 91f / 255f); // #91c75b
             }
             else
@@ -283,7 +283,7 @@ public class SliderLogic : MonoBehaviour
                 Mathf.Approximately(GetSliderIndex(orangeSlider, slider1), expectedOrange) &&
                 Mathf.Approximately(GetSliderIndex(greenSlider, slider2), expectedGreen))
             {
-                Debug.Log("Congrats!");
+                integrityHealth.LogCorrect();
                 spriteRenderer.color = new Color(145f / 255f, 199f / 255f, 91f / 255f); // #91c75b
             }
             else

@@ -91,7 +91,8 @@ public class WireStart : MonoBehaviour
                     SetPosition(correctHole.position);
                     isConnected = true;
                     connectedHole = correctHole;
-                    Debug.Log("Правильное подключение!");
+                    //Debug.Log("Правильное подключение!");
+                    integrity.LogCorrectWire();
                 }
                 else
                 {

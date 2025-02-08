@@ -17,8 +17,14 @@ public class KeyboardController : MonoBehaviour
 
     private bool gameActive = true; // Флаг активности игры
 
+    public GameObject intergrity;
+
+    private IntegrityChanger integrityHealth;
+
     void Start()
     {
+        integrityHealth = intergrity.GetComponent<IntegrityChanger>();
+
         // Устанавливаем KB_Score в белый цвет по умолчанию
         KB_Score.color = new Color(1, 1, 1, 1);
 
@@ -154,12 +160,15 @@ public class KeyboardController : MonoBehaviour
 
         if (isCorrect)
         {
+
             KB_Score.color = new Color(0, 1, 0, 1); // Зеленый цвет
+            integrityHealth.LogCorrect();
             Debug.Log("Игрок победил!");
         }
         else
         {
             KB_Score.color = new Color(1, 0, 0, 1); // Красный цвет
+            integrityHealth.DecreaseHealth();
             Debug.Log("Игрок проиграл!");
         }
 
