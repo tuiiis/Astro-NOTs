@@ -13,6 +13,7 @@ public class AudioManager : MonoBehaviour
 
     void Awake()
     {
+        Debug.Log("im being used");
         // Если уже есть AudioManager, удалить дубликат
         if (instance != null && instance != this)
         {
