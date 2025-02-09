@@ -1,15 +1,19 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FuelDrain : MonoBehaviour
 {
-    public float duration = 30f; // Time in seconds to complete the movement
+    public float duration = 90f; // Time in seconds to complete the movement
     private Vector3 targetPosition; // Final position
     private Vector3 originalPosition; // Starting position
     private float timer; // Internal timer
     private bool isMoving = true; // To control the movement
+    private IntegrityChanger integrity;
 
     void Start()
     {
+        var integrityObject = GameObject.Find("Integrity");
+        integrity = integrityObject.GetComponent<IntegrityChanger>();
         // Store the original position
         originalPosition = transform.position;
 
@@ -38,7 +42,7 @@ public class FuelDrain : MonoBehaviour
             if (progress >= 1f)
             {
                 isMoving = false; // Stop updating
-                Debug.Log("timer is out"); // Log the message
+                SceneManager.LoadScene("Game Over");
             }
         }
     }
